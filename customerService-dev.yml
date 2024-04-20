@@ -11,7 +11,7 @@ server:
   port: 7001
 spring:
   application:
-    name: customer-service
+    name: customerService
   datasource:
     url: jdbc:postgresql://localhost:5432/crm_customer
     username: postgres
