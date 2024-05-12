@@ -11,9 +11,9 @@ server:
   port: 0
 spring:
   application:
-    name: customerService
+    name: inventoryService
   datasource:
-    url: jdbc:postgresql://localhost:5432/crm_customer
+    url: jdbc:postgresql://localhost:5432/crm_inventory
     username: postgres
     password: 54321
   jpa:
