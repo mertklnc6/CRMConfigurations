@@ -8,7 +8,7 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 server:
-  port: 44001
+  port: 44003
 spring:
   application:
     name: customerService
