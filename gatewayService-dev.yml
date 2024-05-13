@@ -40,6 +40,6 @@ spring:
           predicates[0]: Path=/account-service/api/v1/accounts/**
           uri: lb://accountService
         routes[5]:
-          id: inventory-service
+          id: catalog-service
           predicates[0]: Path=/inventory-service/api/v1/inventories/**
           uri: lb://inventoryService
