@@ -13,7 +13,7 @@ spring:
   application:
     name: catalogService
   datasource:
-    url: jdbc:sqlserver://mssql-server:1433;databaseName=crm_catalog
+    url: jdbc:sqlserver://localhost:1433;databaseName=crm_catalog
     username: sa
     password: MKrahm081017?
   jpa:
