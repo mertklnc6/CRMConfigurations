@@ -11,7 +11,7 @@ eureka:
     preferIpAddress: true
 spring:
   application:
-    name: gatewayService
+    name: gateway-service
   cloud:
     gateway:
       default-filters:
@@ -22,7 +22,8 @@ spring:
         predicates[1]: Path=/customer-service/api/v1/addresses/**
         predicates[2]: Path=/customer-service/api/v1/cities/**
         predicates[3]: Path=/customer-service/api/v1/individual-customers/**
-        uri: lb://customerService
+        predicates[4]: Path=/customer-service/api/v1/districts/**
+        uri: lb://customer-service
       routes[1]:
         id: discovery-server
         predicates[0]: Path=/eureka/web
@@ -30,13 +31,32 @@ spring:
         uri: http://localhost:7000
       routes[2]:
         id: identity-service
-        predicates[0]: Path=/identity-service/api/v1/auth/**
-        uri: lb://identityService
+        predicates[0]: Path=/identity-service/api/v1/**
+        uri: lb://identity-service
       routes[3]:
         id: search-service
         predicates[0]: Path=/search-service/api/v1/customers/**
-        uri: lb://searchService
+        predicates[1]: Path=/search-service/api/v1/products/**
+        uri: lb://search-service
       routes[4]:
         id: account-service
         predicates[0]: Path=/account-service/api/v1/accounts/**
-        uri: lb://accountService
+        predicates[1]: Path=/account-service/api/v1/account-types/**
+        uri: lb://account-service
+      routes[5]:
+        id: order-service
+        predicates[0]: Path=/order-service/api/v1/individual-orders/**
+        uri: lb://order-service
+      routes[6]:
+        id: invoice-service
+        predicates[0]: Path=/invoice-service/api/v1/individual-invoices/**
+        uri: lb://invoice-service
+      routes[7]:
+        id: catalog-service
+        predicates[0]: Path=/catalog-service/api/v1/categories/**
+        predicates[1]: Path=/catalog-service/api/v1/products/**
+        uri: lb://catalog-service
+      routes[8]:
+        id: basket-service
+        predicates[0]: Path=/basket-service/api/v1/baskets/**
+        uri: lb://basket-service

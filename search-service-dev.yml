@@ -8,10 +8,10 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 server:
-  port: 0
+  port: 7006
 spring:
   application:
-    name: searchService
+    name: search-service
   data:
     mongodb:
       database: crm_search
