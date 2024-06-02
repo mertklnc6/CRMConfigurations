@@ -15,7 +15,7 @@ spring:
   datasource:
     url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=crm_catalog
     username: sa
-    password: MKrahm081017?
+    password: Mssql123.
     platform: mssql
   jpa:
     hibernate:
