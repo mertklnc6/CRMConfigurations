@@ -13,7 +13,7 @@ spring:
   application:
     name: catalog-service
   datasource:
-    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=crm_catalog
+    url: jdbc:sqlserver://localhost:1434;encrypt=true;trustServerCertificate=true;databaseName=crm_catalog
     username: sa
     password: Mssql123.
     platform: mssql
@@ -30,12 +30,12 @@ spring:
     show-sql: true
   kafka:
     producer:
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: localhost:9093
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     consumer:
       auto-offset-reset: earliest
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: localhost:9093
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:

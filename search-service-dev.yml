@@ -15,12 +15,12 @@ spring:
   data:
     mongodb:
       database: crm_search
-      port: 27017
+      port: 27018
       host: localhost
   kafka:
     consumer:
       auto-offset-reset: earliest
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: localhost:9093
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
